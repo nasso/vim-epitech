@@ -23,6 +23,7 @@ function! s:InsertFirst()
     1,10s/µPROJECTNAMEµ/\= proj_name/ge
     1,10s/µCREATDAYµ/\= s:Epistrtime()/ge
     1,10s/µLASTUPDATEµ/\= s:Epistrtime()/ge
+    1,10s/µYEARµ/\= s:strftime("%Y")/ge
     1,10s/µLOGINLASTµ/\= g:epi_name/ge
 endfunction
 
@@ -50,15 +51,13 @@ function! epitech#header#Put()
     let l:ecom = s:comMap[&filetype]['e']
 
     let l:ret = append(0, l:bcom)
-    let l:ret = append(1, l:mcom . " µFILENAMEµ for µPROJECTNAMEµ in µPATHFILEµ")
+    let l:ret = append(1, l:mcom . " EPITECH PROJECT, µYEARµ")
     let l:ret = append(2, l:mcom . " ")
-    let l:ret = append(3, l:mcom . " Made by µNAMEµ")
-    let l:ret = append(4, l:mcom . " Login   <µLOGINµ@epitech.eu>")
+    let l:ret = append(3, l:mcom . " µPROJECTNAMEµ")
+    let l:ret = append(4, l:mcom . " File description:")
     let l:ret = append(5, l:mcom . " ")
-    let l:ret = append(6, l:mcom . " Started on  µCREATDAYµ µNAMEµ")
-    let l:ret = append(7, l:mcom . " Last update µLASTUPDATEµ µLOGINLASTµ")
-    let l:ret = append(8, l:ecom)
-    let l:ret = append(9, "")
+    let l:ret = append(6, l:ecom)
+    let l:ret = append(7, "")
     call s:InsertFirst()
     :11
 endfunction
