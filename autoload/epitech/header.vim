@@ -24,15 +24,15 @@ function! s:InsertFirst()
     call inputsave()
     let proj_name = input('Enter project name: ')
     call inputrestore()
-    1,8s/µFILENAMEµ/\= expand('%:t')/ge
-    1,8s/µPATHFILEµ/\= expand("%:p:h")/ge
-    1,8s/µLOGINµ/\= g:epi_login/ge
-    1,8s/µNAMEµ/\= g:epi_name/ge
-    1,8s/µPROJECTNAMEµ/\= proj_name/ge
-    1,8s/µCREATDAYµ/\= s:Epistrtime()/ge
-    1,8s/µLASTUPDATEµ/\= s:Epistrtime()/ge
-    1,8s/µYEARµ/\= s:Epiyear()/ge
-    1,8s/µLOGINLASTµ/\= g:epi_name/ge
+    1,7s/µFILENAMEµ/\= expand('%:t')/ge
+    1,7s/µPATHFILEµ/\= expand("%:p:h")/ge
+    1,7s/µLOGINµ/\= g:epi_login/ge
+    1,7s/µNAMEµ/\= g:epi_name/ge
+    1,7s/µPROJECTNAMEµ/\= proj_name/ge
+    1,7s/µCREATDAYµ/\= s:Epistrtime()/ge
+    1,7s/µLASTUPDATEµ/\= s:Epistrtime()/ge
+    1,7s/µYEARµ/\= s:Epiyear()/ge
+    1,7s/µLOGINLASTµ/\= g:epi_name/ge
 endfunction
 
 function! s:IsSupportedFt()
@@ -60,14 +60,13 @@ function! epitech#header#Put()
 
     let l:ret = append(0, l:bcom)
     let l:ret = append(1, l:mcom . " EPITECH PROJECT, µYEARµ")
-    let l:ret = append(2, l:mcom . " ")
     let l:ret = append(3, l:mcom . " µPROJECTNAMEµ")
     let l:ret = append(4, l:mcom . " File description:")
     let l:ret = append(5, l:mcom . " ")
     let l:ret = append(6, l:ecom)
     let l:ret = append(7, "")
     call s:InsertFirst()
-    :9
+    :8
 endfunction
 
 function! epitech#header#Update()
