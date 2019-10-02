@@ -60,11 +60,11 @@ function! epitech#header#Put()
 
     let l:ret = append(0, l:bcom)
     let l:ret = append(1, l:mcom . " EPITECH PROJECT, µYEARµ")
-    let l:ret = append(3, l:mcom . " µPROJECTNAMEµ")
-    let l:ret = append(4, l:mcom . " File description:")
-    let l:ret = append(5, l:mcom . " ")
-    let l:ret = append(6, l:ecom)
-    let l:ret = append(7, "")
+    let l:ret = append(2, l:mcom . " µPROJECTNAMEµ")
+    let l:ret = append(3, l:mcom . " File description:")
+    let l:ret = append(4, l:mcom . " ")
+    let l:ret = append(5, l:ecom)
+    let l:ret = append(6, "")
     call s:InsertFirst()
     :8
 endfunction
