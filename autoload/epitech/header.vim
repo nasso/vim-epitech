@@ -12,6 +12,14 @@ function! s:Epistrtime()
     return str
 endfunction
 
+function! s:Epiyear()
+    let old_time = v:lc_time
+    language time en_US
+    let str = strftime("%Y")
+    exec 'language time '.old_time
+    return str
+endfunction
+
 function! s:InsertFirst()
     call inputsave()
     let proj_name = input('Enter project name: ')
@@ -23,7 +31,7 @@ function! s:InsertFirst()
     1,10s/µPROJECTNAMEµ/\= proj_name/ge
     1,10s/µCREATDAYµ/\= s:Epistrtime()/ge
     1,10s/µLASTUPDATEµ/\= s:Epistrtime()/ge
-    1,10s/µYEARµ/\= s:strftime("%Y")/ge
+    1,10s/µYEARµ/\= s:Epiyear()/ge
     1,10s/µLOGINLASTµ/\= g:epi_name/ge
 endfunction
 
