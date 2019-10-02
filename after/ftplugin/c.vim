@@ -11,7 +11,7 @@ setlocal comments=s:/*,m:**,ex:*/
 setlocal list
 setlocal listchars=tab:··
 setlocal noexpandtab
-setlocal shiftwidth=2
+setlocal shiftwidth=4
 setlocal softtabstop=8
 setlocal tabstop=8
 
