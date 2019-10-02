@@ -24,15 +24,15 @@ function! s:InsertFirst()
     call inputsave()
     let proj_name = input('Enter project name: ')
     call inputrestore()
-    1,10s/µFILENAMEµ/\= expand('%:t')/ge
-    1,10s/µPATHFILEµ/\= expand("%:p:h")/ge
-    1,10s/µLOGINµ/\= g:epi_login/ge
-    1,10s/µNAMEµ/\= g:epi_name/ge
-    1,10s/µPROJECTNAMEµ/\= proj_name/ge
-    1,10s/µCREATDAYµ/\= s:Epistrtime()/ge
-    1,10s/µLASTUPDATEµ/\= s:Epistrtime()/ge
-    1,10s/µYEARµ/\= s:Epiyear()/ge
-    1,10s/µLOGINLASTµ/\= g:epi_name/ge
+    1,8s/µFILENAMEµ/\= expand('%:t')/ge
+    1,8s/µPATHFILEµ/\= expand("%:p:h")/ge
+    1,8s/µLOGINµ/\= g:epi_login/ge
+    1,8s/µNAMEµ/\= g:epi_name/ge
+    1,8s/µPROJECTNAMEµ/\= proj_name/ge
+    1,8s/µCREATDAYµ/\= s:Epistrtime()/ge
+    1,8s/µLASTUPDATEµ/\= s:Epistrtime()/ge
+    1,8s/µYEARµ/\= s:Epiyear()/ge
+    1,8s/µLOGINLASTµ/\= g:epi_name/ge
 endfunction
 
 function! s:IsSupportedFt()
@@ -67,7 +67,7 @@ function! epitech#header#Put()
     let l:ret = append(6, l:ecom)
     let l:ret = append(7, "")
     call s:InsertFirst()
-    :11
+    :9
 endfunction
 
 function! epitech#header#Update()
