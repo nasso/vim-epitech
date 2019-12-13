@@ -19,7 +19,7 @@ The year on the first line is automatically set based on the current date.
 ## Installation
 
 If you use VimPlug, add this to your `.vimrc` (or `~/.config/nvim/init.vim` if
-you're using `neovim`):
+you're using Neovim):
 ```
 Plug 'nasso/vim-epitech'
 ```
@@ -30,13 +30,14 @@ PRs are also welcome.
 ## Headers
 
 You can add Epitech headers to your files with `<Leader>h` (so `\h` by default).
+You can also use the `:EpiHeader` command.
 
 ## Coding Style
 
 Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
 - Use 4 spaces for indenting
 - Show trailing whitespaces (`:h c_space_errors`)
-- Expand <Tab> to the four spaces (`:h expandtab`)
+- Expand `<Tab>` to four spaces (`:h expandtab`)
 
 ## Differences with the original repository
 
@@ -45,7 +46,7 @@ original, outdated plugin. I have removed a bunch of features I considered
 obselete and/or unneeded, including:
 - The integration with the norm checker - _Just write code that follows the
 coding style, you'll get used to it and it's less error-prone._
-- The `EpiCleaner` command, that "fixes" pastes from the PDFs - _Never. Ever.
+- The `:EpiCleaner` command, that "fixes" pastes from the PDFs - _Never. Ever.
 Copy. Anything. From. The. PDF. NEVER. Trust me._
 - A lot of useless code now that the headers have changed and are far smaller -
 _E.g. `g:header_update`, `g:epi_login` etc._
